@@ -1,0 +1,1 @@
+Target=64189. Val1=24069. Val2=40120. Position1=9709. Position2=2748.

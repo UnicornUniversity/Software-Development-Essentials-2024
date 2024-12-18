@@ -29,24 +29,17 @@ function dfs(node) {
     }
 }
 
-// uncomment it if needed
+// uncomment to run
 // dfs(node1);
 
-function bfs(node) {
+function bfs(node){
     let queue = [node];
-
     while(queue.length > 0){
-        let nextQueue = [];
-        for (let i = 0; i < queue.length; i++) {
-            const nodeToProcess = queue[i];
-            console.log(nodeToProcess.value);
-
-            for (let j = 0; j < nodeToProcess.children.length; j++) {
-                nextQueue.push(nodeToProcess.children[j]);
-            }
+        const firstElement = queue.shift();
+        console.log(firstElement.value);
+        for(let j = 0; j < firstElement.children.length; j++){
+            queue.push(firstElement.children[j]);
         }
-
-        queue = nextQueue;
     }
 }
 
